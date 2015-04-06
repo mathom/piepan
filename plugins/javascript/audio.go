@@ -17,12 +17,15 @@ func (p *Plugin) apiAudioPlay(call otto.FunctionCall) otto.Value {
 
 	filenameValue, _ := obj.Get("filename")
 	callbackValue, _ := obj.Get("callback")
+	startSecondsValue, _ := obj.Get("startSeconds")
+
+	startSeconds, _ := startSecondsValue.ToFloat()
 
 	if enc := p.instance.Client.AudioEncoder; enc != nil {
 		enc.SetApplication(gopus.Audio)
 	}
 
-	p.instance.Audio.Play(filenameValue.String(), func() {
+	p.instance.Audio.Play(filenameValue.String(), startSeconds, func() {
 		if callbackValue.IsFunction() {
 			p.callValue(callbackValue)
 		}
@@ -88,7 +91,8 @@ func (p *Plugin) apiAudioSetTarget(call otto.FunctionCall) otto.Value {
 
 func (p *Plugin) apiAudioStop(call otto.FunctionCall) otto.Value {
 	p.instance.Audio.Stop()
-	return otto.UndefinedValue()
+	value, _ := p.state.ToValue(p.instance.Audio.ElapsedTime)
+	return value
 }
 
 func (p *Plugin) apiAudioIsPlaying(call otto.FunctionCall) otto.Value {
