@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/layeh/gumble/gumble"
-	"github.com/layeh/gumble/gumble_ffmpeg"
-	"github.com/layeh/gumble/gumbleutil"
-	"github.com/layeh/piepan"
+	"github.com/mathom/gumble/gumble"
+	"github.com/mathom/gumble/gumble_ffmpeg"
+	"github.com/mathom/gumble/gumbleutil"
+	"github.com/mathom/piepan"
 )
 
 type strFlagSlice []string

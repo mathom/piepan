@@ -1,8 +1,8 @@
 package plugin
 
 import (
-	"github.com/layeh/gumble/gumble"
-	. "github.com/layeh/piepan/plugins"
+	"github.com/mathom/gumble/gumble"
+	. "github.com/mathom/piepan/plugins"
 )
 
 func (p *Plugin) OnConnect(e *gumble.ConnectEvent) {

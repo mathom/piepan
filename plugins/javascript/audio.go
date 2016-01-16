@@ -2,7 +2,7 @@ package plugin
 
 import (
 	"github.com/layeh/gopus"
-	"github.com/layeh/gumble/gumble"
+	"github.com/mathom/gumble/gumble"
 	"github.com/robertkrimen/otto"
 )
 

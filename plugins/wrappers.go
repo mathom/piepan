@@ -1,8 +1,8 @@
 package plugin
 
 import (
-	"github.com/layeh/gumble/gumble"
-	"github.com/layeh/gumble/gumbleutil"
+	"github.com/mathom/gumble/gumble"
+	"github.com/mathom/gumble/gumbleutil"
 )
 
 type DisconnectEventWrapper struct {

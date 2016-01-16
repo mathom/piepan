@@ -7,7 +7,7 @@ import (
 	"sync"
 
 	"github.com/aarzilli/golua/lua"
-	"github.com/layeh/piepan"
+	"github.com/mathom/piepan"
 	"github.com/stevedonovan/luar"
 )
 

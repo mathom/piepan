@@ -1,5 +1,7 @@
 # piepan: an easy to use framework for writing scriptable [Mumble](http://mumble.sourceforge.net/) bots
 
+Notice: This is a fork of piepan v0.7.0 that includes Javascript support.
+
 ## Usage
 
     piepan v0.7.0
@@ -29,9 +31,9 @@
 
 ## Scripting documentation
 
-- [JavaScript](https://github.com/layeh/piepan/blob/master/plugins/javascript/README.md)
-- [Go Lua](https://github.com/layeh/piepan/blob/master/plugins/golua/README.md)
-- [C Lua](https://github.com/layeh/piepan/blob/master/plugins/lua/README.md)
+- [JavaScript](https://github.com/mathom/piepan/blob/master/plugins/javascript/README.md)
+- [Go Lua](https://github.com/mathom/piepan/blob/master/plugins/golua/README.md)
+- [C Lua](https://github.com/mathom/piepan/blob/master/plugins/lua/README.md)
 
 ## Building
 
@@ -54,15 +56,15 @@
     - `export CGO_CFLAGS="$(pkg-config --cflags opus)"`
 4. Fetch piepan
     - Base package
-        - `go get -tags nopkgconfig -u github.com/layeh/piepan`
+        - `go get -tags nopkgconfig -u github.com/mathom/piepan`
     - JavaScript plugin (Optional)
-        - `go get -u github.com/layeh/piepan/plugins/javascript`
+        - `go get -u github.com/mathom/piepan/plugins/javascript`
     - Go Lua plugin (Optional)
-        - `go get -u github.com/layeh/piepan/plugins/golua`
+        - `go get -u github.com/mathom/piepan/plugins/golua`
     - C Lua plugin (Optional)
         - Unavailable on Windows
 5. Build piepan
-    - `go build -o piepan.exe $GOPATH/src/github.com/layeh/piepan/cmd/piepan/{javascript,golua,main}.go`
+    - `go build -o piepan.exe $GOPATH/src/github.com/mathom/piepan/cmd/piepan/{javascript,golua,main}.go`
 6. Run piepan
     - `./piepan.exe ...`
 
@@ -81,15 +83,15 @@
     - `export GOPATH=$(mktemp -d)`
 3. Fetch piepan
     - Base package
-        - `go get -u github.com/layeh/piepan`
+        - `go get -u github.com/mathom/piepan`
     - JavaScript plugin (Optional)
-        - `go get -u github.com/layeh/piepan/plugins/javascript`
+        - `go get -u github.com/mathom/piepan/plugins/javascript`
     - Go Lua plugin (Optional)
-        - `go get -u github.com/layeh/piepan/plugins/golua`
+        - `go get -u github.com/mathom/piepan/plugins/golua`
     - C Lua plugin (Optional)
-        - `go get -u github.com/layeh/piepan/plugins/lua`
+        - `go get -u github.com/mathom/piepan/plugins/lua`
 4. Build piepan (plugins can be removed if they are not wanted)
-    - `go build -o piepan $GOPATH/src/github.com/layeh/piepan/cmd/piepan/{javascript,golua,lua,main}.go`
+    - `go build -o piepan $GOPATH/src/github.com/mathom/piepan/cmd/piepan/{javascript,golua,lua,main}.go`
 5. Run piepan using `avconv`
     - `./piepan -ffmpeg=avconv ...`
 

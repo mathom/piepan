@@ -3,7 +3,7 @@ package plugin
 import (
 	"github.com/aarzilli/golua/lua"
 	"github.com/layeh/gopus"
-	"github.com/layeh/gumble/gumble"
+	"github.com/mathom/gumble/gumble"
 	"github.com/stevedonovan/luar"
 )
 

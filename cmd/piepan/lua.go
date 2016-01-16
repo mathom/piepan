@@ -1,5 +1,5 @@
 package main
 
 import (
-	_ "github.com/layeh/piepan/plugins/lua"
+	_ "github.com/mathom/piepan/plugins/lua"
 )
